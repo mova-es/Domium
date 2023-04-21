@@ -27,5 +27,15 @@ const headEl = document.querySelector('.header');
       }
     });
     
-const video = document.querySelector('.overview_video');
-video.playbackRate = 0.5;
+// const video = document.querySelector('.overview_video');
+// video.playbackRate = 0.5;
+
+const aristoLink = document.querySelector('.aristo_link');
+aristoLink.addEventListener('click', function (e) {
+  document.getElementById('aristo').scrollIntoView({behavior: "smooth"});
+});
+
+const gliverLink = document.querySelector('.gliver_link');
+gliverLink.addEventListener('click', function (e) {
+  document.getElementById('gliver').scrollIntoView({behavior: "smooth"});
+});
