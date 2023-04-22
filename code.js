@@ -39,3 +39,56 @@ const gliverLink = document.querySelector('.gliver_link');
 gliverLink.addEventListener('click', function (e) {
   document.getElementById('gliver').scrollIntoView({behavior: "smooth"});
 });
+
+const aristoImages = document.querySelector('.partner__aristo-images');
+const aristoSlider = document.querySelector('.aristo__slider');
+const exit = document.querySelector('.exit');
+
+aristoImages.addEventListener('click', function (e) {
+  aristoSlider.classList.remove('hide');
+});
+
+exit.addEventListener('click', function (e) {
+  aristoSlider.classList.add('hide');
+});
+
+$(function() {
+  
+  var slideCount =  $(".slider ul li").length;
+  var slideWidth =  $(".slider ul li").width();
+  var slideHeight =  $(".slider ul li").height();
+  var slideUlWidth =  slideCount * slideWidth;
+  
+  $(".slider").css({"max-width":slideWidth, "height": slideHeight});
+  $(".slider ul").css({"width":slideUlWidth, "margin-left": - slideWidth });
+  $(".slider ul li:last-child").prependTo($(".slider ul"));
+  
+  function moveLeft() {
+    $(".slider ul").stop().animate({
+      left: + slideWidth
+    },700, function() {
+      $(".slider ul li:last-child").prependTo($(".slider ul"));
+      $(".slider ul").css("left","");
+    });
+  }
+  
+  function moveRight() {
+    $(".slider ul").stop().animate({
+      left: - slideWidth
+    },700, function() {
+      $(".slider ul li:first-child").appendTo($(".slider ul"));
+      $(".slider ul").css("left","");
+    });
+  }
+  
+  
+  $(".next").on("click",function(){
+    moveRight();
+  });
+  
+  $(".prev").on("click",function(){
+    moveLeft();
+  });
+  
+  
+});
