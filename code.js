@@ -46,10 +46,13 @@ const exit = document.querySelector('.exit');
 
 aristoImages.addEventListener('click', function (e) {
   aristoSlider.classList.remove('hide');
+  aristoSlider.scrollIntoView();
+  document.querySelector('body').classList.add('slider-on');
 });
 
 exit.addEventListener('click', function (e) {
   aristoSlider.classList.add('hide');
+  document.querySelector('body').classList.remove('slider-on');
 });
 
 $(function() {
