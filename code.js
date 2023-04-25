@@ -55,6 +55,8 @@ exit.addEventListener('click', function (e) {
   document.querySelector('body').classList.remove('slider-on');
 });
 
+
+
 $(function() {
   
   var slideCount =  $(".slider ul li").length;
