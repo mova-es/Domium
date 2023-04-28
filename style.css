@@ -352,11 +352,11 @@ margin-right: 20px;
   padding-bottom: 30px;
 }
 
-.contacts__address {
+.contacts__address-and-consult {
+  margin-top: 50px;
   display: flex;
-  flex-direction: column;
   gap: 20px;
-  margin-left: 20px;
+  justify-content: center;
 }
 .main__contacts-title {
   text-align: center;
@@ -381,12 +381,11 @@ margin-right: 20px;
 
 .contacts__content {
 display: flex;
-justify-content: space-around;
+flex-direction: column;
 }
 
 .consult {
   width: 500px;
-  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -394,19 +393,23 @@ justify-content: space-around;
   text-align: center;
   gap: 20px;
   color: #c9c9c9;
-  font-size: 25px;
+  font-size: 20px;
   border: 1px solid #c9c9c9;
   padding: 20px;
   margin-left: 20px;
+}
+
+input {
+  color: #c9c9c9;
 }
 
 .input_name,
 .input_tel {
   height: 50px;
   width: 300px;
-  border: none;
+  border: 1px solid #c9c9c9;
   margin-bottom: 20px;
-  background-color: #e9e5e5;
+  background-color: #292828;
   font-size: 20px;
   padding-left: 15px;
 }
@@ -436,6 +439,10 @@ width: 100vw;
 height: 100vh;
 }
 
+.gliver__slider {
+  top: 500px;
+}
+
 .content {
   position: relative;
 }
@@ -451,7 +458,10 @@ height: 100vh;
   display: none;
 }
 
-.slider{
+.slider,
+.slider2,
+.slider3,
+.slider4 {
   position:relative;
   width:100%;
   overflow:hidden;
@@ -459,7 +469,10 @@ height: 100vh;
   margin:20px auto 0 auto;
 }
 
-.slider ul{
+.slider ul,
+.slider2 ul,
+.slider3 ul,
+.slider4 ul{
   position:relative;
   width:100%;
   margin:0;
@@ -471,7 +484,10 @@ height: 100vh;
 }
 
 
-.slider ul li{
+.slider ul li,
+.slider2 ul li,
+.slider3 ul li,
+.slider4 ul li{
   position:relative;
   float:left;
   display:inline-block;
@@ -485,7 +501,10 @@ height: 100vh;
   color:#333;
 }
 
-.slider  ul li img {
+.slider  ul li img,
+.slider2  ul li img,
+.slider3  ul li img,
+.slider4  ul li img {
   width: 100%;
   height: 100%;
 }
@@ -513,4 +532,19 @@ height: 100vh;
 
 .next{
   right:0px;
+}
+
+.slider3 {
+  width:600px;
+  height:500px;
+}
+
+.slider3 ul{
+  height:500px;
+}
+
+.slider3 ul li{
+  width:600px;
+  height:500px;
+  line-height:500px;
 }
