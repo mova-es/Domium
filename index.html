@@ -400,9 +400,9 @@
             </div>
             <div class="consult">
               <p>Служба поддержки всегда на связи и готова вам помочь, чтобы вы получили максимальный результат.</p>
-              <form action="#">
-                <input class="input_name" type="text" placeholder="Введите ваше имя">
-                <input class="input_tel" type="tel" placeholder="Введите ваш телефон">
+              <form action="handler.php" method="post">
+                <input class="input_name" name="username" type="text" placeholder="Введите ваше имя" required>
+                <input class="input_tel" name="phone" type="tel" placeholder="Введите ваш телефон" required>
                 <button class="btn_submit" type="submit">Получить консультацию</button>
               </form>
             </div>
