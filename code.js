@@ -1,3 +1,9 @@
+$(document).ready(function(){
+  $(".hamburger").click(function(){
+    $(this).toggleClass("is-active");
+  });
+});
+
 const slideEls = document.querySelectorAll(".slide");
 const mainEl = document.querySelector('.main');
 
@@ -269,3 +275,4 @@ $(function() {
   
   
 });
+
