@@ -1,6 +1,9 @@
 $(document).ready(function(){
+  $( ".menu" ).hide();
   $(".hamburger").click(function(){
-    $(this).toggleClass("is-active");
+    $( ".menu" ).slideToggle( "slow", function() {
+      $( ".hamburger" ).toggleClass("is-active");
+      });
   });
 });
 
